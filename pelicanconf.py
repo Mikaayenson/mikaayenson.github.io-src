@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Mika Ayenson'
-SITENAME = u"Mika's Blog"
+SITENAME = u"Learning Cyber Security"
 SITEURL = ''
 
 PATH = 'content'
@@ -20,11 +20,23 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),)
+LINKS = (('Pelican', 'http://getpelican.com/'),)
 
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.mdx_grid_tables': {},
+        'markdown.extensions.extra': {'css_class': 'highlight'},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
+
+PLUGIN_PATHS = ['../pelican-plugins']
+PLUGINS = ['gravatar', 'bootstrapify']
